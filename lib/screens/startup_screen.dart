@@ -15,7 +15,7 @@ class StartUpScreen extends StatelessWidget {
                   top: 0,
                   left: 0,
                   right: 0,
-                  child: Image.asset('assets/images/top_burgers.png'),
+                  child: Image.asset('assets/images/burger.png'),
                 ),
                 Positioned(
                   bottom: 0,

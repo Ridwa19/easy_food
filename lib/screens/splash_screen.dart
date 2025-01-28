@@ -8,33 +8,50 @@ class SplashScreen extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: Colors.red,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      backgroundColor: Colors.red, // Set the background color
+      body: Stack(
         children: [
-          Expanded(
-            child: Stack(
+          // Top burger image
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Image.asset(
+              'assets/images/burger_top.png',
+              fit: BoxFit.cover,
+              height: 200,
+            ),
+          ),
+
+          // Bottom burger image
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Image.asset(
+              'assets/images/burger_bottom.png',
+              fit: BoxFit.cover,
+              height: 200,
+            ),
+          ),
+
+          // Center logo and text
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Positioned(
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  child: Image.asset('assets/images/top_burgers.png'), // Top image
+                // Main central burger image
+                Image.asset(
+                  'assets/images/burger_main.png',
+                  height: 200,
                 ),
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Image.asset('assets/images/bottom_burgers.png'), // Bottom image
-                ),
-                Center(
-                  child: Text(
-                    'EasyFood',
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                SizedBox(height: 20),
+                Text(
+                  'EasyFood',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ],

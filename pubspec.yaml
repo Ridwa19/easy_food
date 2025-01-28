@@ -27,3 +27,6 @@ flutter:
   assets:
     - assets/images/burger.png
     - assets/images/user.png
+    - assets/images/burger_main.png
+    - assets/images/burger_bottom.png
+    
